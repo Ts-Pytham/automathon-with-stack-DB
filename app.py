@@ -2,7 +2,7 @@ from flask import Flask, request, render_template, jsonify
 import sqlite3
 from flask_cors import CORS
 
-app = Flask(__name__, template_folder='index.html')
+app = Flask(__name__, template_folder='./index.html')
 
 CORS(app, resources={r"/*": {"origins": "*"}})
 
