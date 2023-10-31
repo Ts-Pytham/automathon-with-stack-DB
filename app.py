@@ -4,8 +4,6 @@ from flask_cors import CORS
 
 app = Flask(__name__, template_folder='C:/Users/dario/Desktop/6to semestre/c_ompiladores/programa-automata-pila/index.html')
 
-
-app.config['DEBUG'] = True
 CORS(app, resources={r"/obtener_historial": {"origins": "https://automaton-with-stack.vercel.app"}})
 CORS(app, resources={r"/guardar_historial": {"origins": "https://automaton-with-stack.vercel.app"}})
 
