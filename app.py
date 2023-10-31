@@ -21,6 +21,11 @@ def create_database():
 
 create_database()
 
+@app.route("/prueba")
+def prueba():
+    return "Hello world!"
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
