@@ -6,8 +6,8 @@ app = Flask(__name__, template_folder='C:/Users/dario/Desktop/6to semestre/c_omp
 
 
 app.config['DEBUG'] = True
-CORS(app, resources={r"/obtener_historial": {"origins": "http://127.0.0.1:8080"}})
-CORS(app, resources={r"/guardar_historial": {"origins": "http://127.0.0.1:8080"}})
+CORS(app, resources={r"/obtener_historial": {"origins": "https://automaton-with-stack.vercel.app/"}})
+CORS(app, resources={r"/guardar_historial": {"origins": "https://automaton-with-stack.vercel.app/"}})
 
 # Crear la base de datos y la tabla
 def create_database():
