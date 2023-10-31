@@ -4,8 +4,8 @@ from flask_cors import CORS
 
 app = Flask(__name__, template_folder='C:/Users/dario/Desktop/6to semestre/c_ompiladores/programa-automata-pila/index.html')
 
-CORS(app, resources={r"/obtener_historial": {"origins": "https://automaton-with-stack.vercel.app"}})
-CORS(app, resources={r"/guardar_historial": {"origins": "https://automaton-with-stack.vercel.app"}})
+CORS(app, resources={r"/obtener_historial": {"origins": "*"}})
+CORS(app, resources={r"/guardar_historial": {"origins": "*"}})
 
 # Crear la base de datos y la tabla
 def create_database():
