@@ -2,13 +2,13 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import os
 import sqlite3
-from models import Historial
+from app.models import Historial
 
 app = FastAPI()
-
+origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins="origins",
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -28,7 +28,7 @@ def create_database():
    
 @app.get("/prueba")
 def read_root():
-    return {"Hello": "World"}
+    return "hello, World!"
 
 # Ruta para obtener el historialF
 @app.get('/obtener_historial')
